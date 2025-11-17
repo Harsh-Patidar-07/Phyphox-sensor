@@ -2,7 +2,7 @@ import requests
 import time
 import math
 
-url = "" 
+BASE_URL = "" 
 
 Xaxis = "gyrX"
 Yaxis = "gyrY"
