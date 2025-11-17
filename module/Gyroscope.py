@@ -4,17 +4,28 @@ import math
 
 BASE_URL = "" 
 
-Xaxis = "gyrX"
-Yaxis = "gyrY"
-Zaxis = "gyrZ"
+gyro_Xaxis = "gyrX"
+gyro_Yaxis = "gyrY"
+gyro_Zaxis = "gyrZ"
 
-def get_latest(buffer_name) :
-    url_final = f"{url}/get?{buffer_name}"
-    r = requests.get(url_final).json()
+class Gyroscope() :
+    def get_latest(buffer_name) :
+        url_final = f"{BASE_URL}/get?{buffer_name}"
+        r = requests.get(url_final).json()
 
-    try :
-        # Extract value from : 
-        # {"buffer": { "gyrX": { "buffer": [value] } }
-        return r["buffer"][buffer_name]["buffer"][0]
-    except :
-        return None
+        try :
+            # Extract value from : 
+            # {"buffer": { "gyrX": { "buffer": [value] } }
+            return r["buffer"][buffer_name]["buffer"][0]
+        except :
+            return None
+        
+class Accelerometer() :
+    def get_latest(buffer_name) :
+        url_final = f"{BASE_URL}/get?{buffer_name}" 
+        r = requests.get(url_final).json
+
+        try :
+            return r["buffer"][buffer_name]["buffer"][0]
+        except :
+            return None
