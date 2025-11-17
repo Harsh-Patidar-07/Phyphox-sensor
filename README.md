@@ -21,7 +21,7 @@ Supported sensors depend on your phone, but commonly include:
 2. Open any experiment that supports remote access.
 3. Enable the "Remote Access" option in the experiment.
 4. Note the IP address and port shown inside the app.
-5. Update the `BASE` URL in your Python script accordingly.
+5. Update the `URL` URL in your Python script accordingly.
 6. Use the script in this repository to pull sensor data via HTTP.
 
 Your Python code sends GET requests, Phyphox responds with JSON, and you extract the values you need.
@@ -32,6 +32,3 @@ Your Python code sends GET requests, Phyphox responds with JSON, and you extract
 - `requests` library
 - Smartphone with Phyphox installed
 - Both devices connected to the same Wi-Fi network
-
-Install the required Python package:
-
