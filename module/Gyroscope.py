@@ -8,9 +8,9 @@ gyro_Xaxis = "gyrX"
 gyro_Yaxis = "gyrY"
 gyro_Zaxis = "gyrZ"
 
-accelerometer_Xaxis = accX
-accelerometer_Yaxis = accY
-accelerometer_Zaxis = accZ
+accelerometer_Xaxis = "accX"
+accelerometer_Yaxis = "accY"
+accelerometer_Zaxis = "accZ"
 
 class Gyroscope() :
     def get_latest(buffer_name) :
